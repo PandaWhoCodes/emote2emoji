@@ -2,6 +2,10 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 from keras.preprocessing import image
+EMOTIONS = ['angry', 'disgusted', 'fearful', 'happy', 'sad', 'surprised', 'neutral']
+
+def kyaEmoji(emotion):
+    return 'emojis/{}.png'.format(emotion)
 
 def load_image(image_path, grayscale=False, target_size=None):
     pil_image = image.load_img(image_path, grayscale, target_size)
